@@ -54,9 +54,7 @@ def on_close(self, message):
 
 # does this override the on_connect in wsocket? or in addition to that (+=)?
 def on_connect(client):
-    # RPD: how print full URL of the connect?
-    print("RPD: on_connect in minimal.py, client:", repr(client) + " connected")
-    print("RPD: on_connect in minimal.py client path:", client.path)
+    print(f"RPD: on_connect in minimal.py, client: {client} connected")
     #exit()
     with open(audfn, "wb") as audf:
         audf.close()
